@@ -1,0 +1,146 @@
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Aplikasi Penjualan</title> 
+<link rel="stylesheet" href="style.css"> 
+</head> 
+<body>
+        <!--MEnu bar  -->
+        <nav class="menu-bar">
+        <ul>
+            <li><a onclick="filterProducts('all');  setActiveLink(this)" data-category="all">All</a></li>
+            <li><a  onclick="filterProducts('snacks');  setActiveLink(this)" data-category="snacks">Snacks</a></li>
+            <li><a  onclick="filterProducts('main');  setActiveLink(this)" data-category="main">Main Dishes</a></li>
+            <li><a  onclick="filterProducts('desserts');  setActiveLink(this)" data-category="desserts">Desserts</a></li>
+            <li><a  onclick="filterProducts('drinks');  setActiveLink(this)" data-category="drinks">Drinks</a></li>
+        </ul>
+    </nav>
+        <!-- Menu bar end -->
+<div class="header">
+    <h1 class="h1-main"><img src="fastfood_35dp_FFDD00_FILL0_wght400_GRAD0_opsz40.png" style="width: 50px; height: 100%; margin-right: 10px;">Daftar<span style="color: white;">Produk</span></h1>
+    <p></p>
+</div>
+<div class="container"> 
+<div class="product" data-category="main" data-bg="chicken_spicy.jpg"> 
+<img src="chicken_spicy.jpg" alt="chicken spicy">
+<h2>Chicken Spicy</h2> 
+            <p>Rp 20.000</p> 
+            <button onclick="addToCart('Chicken spicy', 20000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-bg="cheese_fries.jpg" data-category="snacks"> 
+            <img src="cheese_fries.jpg" alt="cheeses fries"> 
+            <h2>Cheesy Fries</h2> 
+            <p>Rp 7.000</p> 
+            <button onclick="addToCart('Cheesey fries', 7000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="snacks" data-bg="nugget.jpg"> 
+            <img src="nugget.jpg" alt="Nugget"> 
+            <h2>Nugget</h2> 
+            <p>Rp 10.000</p> 
+            <button onclick="addToCart('Nugget', 10000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="desserts" data-bg="masa_bakery.jpg"> 
+            <img src="masa_bakery.jpg" alt="kue"> 
+            <h2>Croissant Bogor</h2> 
+            <p>Rp 54.000</p> 
+            <button onclick="addToCart('Croissant Bogor', 54000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="snacks" data-bg="hokkaido_toast.jpg"> 
+            <img src="hokkaido_toast.jpg" alt="hokkaido toast"> 
+            <h2>Hokkaido Toast</h2> 
+            <p>Rp 250.000</p> 
+            <button onclick="addToCart('Hokkaido Toast', 250000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="main" data-bg="https://images.pexels.com/photos/2983101/pexels-photo-2983101.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            <img src="burger.jpg" alt="Burger"> 
+            <h2>Burger</h2> 
+            <p>Rp 180.000</p> 
+            <button onclick="addToCart('Burger', 180000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="desserts" data-bg="https://images.pexels.com/photos/4916466/pexels-photo-4916466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            <img src="Gelato.jpg" alt="Gelato"> 
+            <h2>Gelato</h2> 
+            <p>Rp 35.000</p> 
+            <button onclick="addToCart('Gelato', 35000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="main" data-bg="https://images.pexels.com/photos/26390884/pexels-photo-26390884/free-photo-of-ramen-bowl-with-nori-sheets.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            <img src="spicy_ramen.jpg" alt="Spicy ramen"> 
+            <h2>Spicy Ramen</h2> 
+            <p>Rp 15.000</p> 
+            <button onclick="addToCart('Spicy Ramen', 180000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="main" data-bg="https://images.pexels.com/photos/6544376/pexels-photo-6544376.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            <img src="rice_bowl.jpg" alt="Rice Bowl"> 
+            <h2>Rice Bowl</h2> 
+            <p>Rp 20.000</p> 
+            <button onclick="addToCart('Rice Bowl', 20000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="main" data-bg="https://images.pexels.com/photos/13376566/pexels-photo-13376566.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            <img src="neapolitan_pizza.jpg" alt="Neapolitan Pizza"> 
+            <h2>Neapolitan Pizza</h2> 
+            <p>Rp 86.000</p> 
+            <button onclick="addToCart('Neapolitan Pizza', 86000)">Add to cart</button> 
+        </div> 
+        <div class="product" data-category="main" data-bg="https://images.pexels.com/photos/723198/pexels-photo-723198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            <img src="fried_rice.jpg" alt="Fried Rice"> 
+            <h2>Fried Rice</h2> 
+            <p>Rp 15.000</p> 
+            <button onclick="addToCart('Fried Rice', 15000)">Add to cart</button> 
+        </div>
+        <div class="product" data-category="drinks" data-bg="https://images.pexels.com/photos/7676956/pexels-photo-7676956.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            <img src="mineral_water.jpg" alt="Mineral Water"> 
+            <h2>Mineral Water</h2> 
+            <p>Rp 4.500</p> 
+            <button onclick="addToCart('Mineral Water', 4500)">Add to cart</button> 
+        </div> 
+        </div> 
+        <!-- END OF CONTAINER -->
+        <!-- Footer -->
+        <footer class="footer">
+        <p>&copy; 2024 Divinka's Website. All rights reserved.</p>
+            <a>Privacy Policy</a> | 
+            <a>Terms of Service</a> | 
+            <button onclick="openModalContact" id="openModalContact">Contact Me (Click me pls)</button>
+    </footer>
+    
+    <!-- Modal structure -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Contact Information</h2>
+            <p>Email: example@example.com</p>
+            <p>Phone: +123-456-7890</p>
+            <h3>Follow Us</h3>
+            <p>
+                <a href="https://facebook.com" target="_blank">Facebook</a> | 
+                <a href="https://twitter.com" target="_blank">Twitter</a> | 
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </div>
+
+        <!-- Footer End -->
+    <div id="cartModal" class="modal"> 
+        <div class="modal-content"> 
+            <span class="close" onclick="closeCart()">&times;</span> 
+            <h2>~ Keranjang Belanja ~</h2> 
+            <table id="cartTable"> 
+                <thead> 
+                    <tr> 
+                        <th><span style="margin: 0 10px 0 10px;">Barang</span></th> 
+                        <th><span style="margin: 0 10px 0 10px;">Harga</span></th>
+                    </tr> 
+                </thead> 
+                <tbody id="cartBody"> 
+                    <!-- Item keranjang akan ditambahkan di sini --> 
+                </tbody> 
+            </table> 
+            <button onclick="printReceipt()" class="btn-struk">Buy</button> 
+        </div> 
+    </div> 
+    
+    <script src="main.js"></script> 
+</body> 
+</html>
